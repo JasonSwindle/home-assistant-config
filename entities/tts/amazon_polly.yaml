@@ -1,0 +1,9 @@
+---
+# Text to speech
+# Please check the docs at https://home-assistant.io/components/tts/
+#
+platform: amazon_polly
+aws_access_key_id: !secret amazon_polly_key_id
+aws_secret_access_key: !secret amazon_polly_access_key
+region_name: us-west-2
+output_format: ogg_vorbis

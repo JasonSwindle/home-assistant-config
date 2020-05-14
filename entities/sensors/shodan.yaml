@@ -1,0 +1,5 @@
+---
+
+platform: shodan
+api_key: !secret shodan_api
+query: '{{sensor.dnsip}}'

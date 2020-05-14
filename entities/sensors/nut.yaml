@@ -1,0 +1,11 @@
+---
+
+platform: nut
+name: Cabinet UPS
+host: storage-moose
+resources:
+  - ups.status.display
+  - ups.load
+  - input.voltage
+  - battery.charge
+  - battery.runtime

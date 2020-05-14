@@ -1,0 +1,6 @@
+---
+
+zwave:
+  title: Z-Wave
+  icon: mdi:thermometer
+  url: http://rocky:8091

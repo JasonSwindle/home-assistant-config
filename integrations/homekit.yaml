@@ -1,0 +1,19 @@
+---
+
+homekit:
+  auto_start: false
+  filter:
+    exclude_domains:
+      - automation
+      - remote
+      - script
+      - binary_sensor
+      - device_tracker
+      - person
+      - alarm_control_panel
+      - cover
+
+  entity_config:
+    media_player.speakers:
+      feature_list:
+        - feature: play_pause

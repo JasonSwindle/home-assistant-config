@@ -1,0 +1,6 @@
+---
+
+nodered:
+  title: Node-RED
+  icon: mdi:arrow-decision
+  url: http://rocky:1880

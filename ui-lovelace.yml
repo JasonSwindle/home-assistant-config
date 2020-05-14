@@ -1,0 +1,119 @@
+---
+
+title: 4274 S
+views:
+  - badges: []
+    cards:
+      - cards:
+          - entities:
+              - entity: sensor.cabinet_ups_status
+                name: Status
+              - entity: sensor.cabinet_ups_input_voltage
+                name: Input Voltage
+              - entity: sensor.cabinet_ups_battery_runtime
+                name: Battery Runtime
+            theme: default
+            title: Cabinet UPS
+            type: glance
+          - cards:
+              - entity: sensor.cabinet_ups_battery_charge
+                max: 100
+                min: 0
+                name: Battery
+                severity:
+                  green: 0
+                  red: -80
+                  yellow: -30
+                theme: default
+                type: gauge
+              - entity: sensor.cabinet_ups_load
+                max: 100
+                min: 0
+                name: Load
+                severity:
+                  green: 0
+                  red: 90
+                  yellow: 70
+                theme: default
+                type: gauge
+            type: horizontal-stack
+        type: vertical-stack
+      - entity: climate.remotec_zxt_600us_ac_master_mode
+        name: Downstairs
+        theme: Backend-selected
+        type: thermostat
+      - entity: weather.dark_sky
+        type: weather-forecast
+      - aspect_ratio: 50%
+        entity: camera.mo_cleaning_map
+        hold_action:
+          action: none
+        tap_action:
+          action: none
+        type: picture-entity
+      - entities:
+          - entity: input_boolean.override_schedule_small_aquarium_light
+            name: Disable small aquarium light schedule
+        show_header_toggle: false
+        title: Schedule Overrides
+        type: entities
+    path: default_view
+    title: Home
+  - badges: []
+    cards:
+      - entities:
+          - entity: switch.zooz_zen20_v2_0_power_strip_switch_8
+            name: Master Switch
+          - entity: switch.zooz_zen20_v2_0_power_strip_switch
+            icon: 'mdi:flash-off'
+            name: BLANK
+          - entity: switch.zooz_zen20_v2_0_power_strip_switch_2
+            icon: 'mdi:flash-off'
+            name: BLANK
+          - entity: switch.zooz_zen20_v2_0_power_strip_switch_3
+            icon: 'mdi:air-filter'
+            name: Shrimp Filter
+          - entity: switch.zooz_zen20_v2_0_power_strip_switch_4
+            name: BLANK
+          - entity: switch.zooz_zen20_v2_0_power_strip_switch_5
+            icon: 'mdi:spotlight-beam'
+            name: Overhead LED Light
+          - entity: sensor.zooz_zen20_v2_0_power_strip_power_2
+            name: BLANK
+          - entity: sensor.zooz_zen20_v2_0_power_strip_power_3
+            name: BLANK
+          - entity: sensor.zooz_zen20_v2_0_power_strip_power_4
+            name: Shrimp Filter
+          - entity: sensor.zooz_zen20_v2_0_power_strip_power_5
+            name: BLANK
+          - entity: sensor.zooz_zen20_v2_0_power_strip_power_6
+            name: Overhead LED Light
+          - entity: sensor.zooz_zen20_v2_0_power_strip_power
+            name: Master
+        show_header_toggle: false
+        type: entities
+      - entities:
+          - entity: sensor.zooz_zen20_v2_0_power_strip_power
+        hours_to_show: 1
+        refresh_interval: 30
+        type: history-graph
+    title: Aquarium
+  - badges: []
+    cards:
+      - entity: media_player.volumio_speakers_local
+        type: media-control
+      - entity: media_player.living_room
+        type: media-control
+    panel: false
+    title: Master Bedroom
+  - badges: []
+    cards:
+      - entities:
+          - entity: group.all_locks
+        show_header_toggle: false
+        type: entities
+      - entity: camera.front_door
+        type: picture-entity
+      - entity: camera.front_door_2
+        type: picture-entity
+    title: Front Door

@@ -1,0 +1,6 @@
+---
+
+esphome:
+  title: ESPHome
+  icon: mdi:thermometer
+  url: http://rocky:6052

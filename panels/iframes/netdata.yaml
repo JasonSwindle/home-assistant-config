@@ -1,0 +1,6 @@
+---
+
+netdata:
+  title: Netdata
+  icon: mdi:server
+  url: http://rocky:19999
